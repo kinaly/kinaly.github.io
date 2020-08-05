@@ -415,16 +415,6 @@ figure {
 /* ==base                        */
 /* ----------------------------- */
 /* for html tag styling like html, body, h1... */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
 p {
   margin: 0 0 1em;
 }

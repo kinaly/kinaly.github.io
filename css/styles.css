@@ -415,27 +415,73 @@ figure {
 /* ==base                        */
 /* ----------------------------- */
 /* for html tag styling like html, body, h1... */
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
 p {
   margin: 0 0 1em;
 }
-/* ----------------------------- */
-/* ==components                  */
-/* ----------------------------- */
 body {
-  background-color: #f0f0f0;
+  --c-slate-gray: #353a45;
+  --c-slate-gray-light: #404653;
+  --c-slate-gray-dark: #2a2e37;
+  --c-peach: #fdccb4;
+  --c-peach-light: #feddcd;
+  --c-steel-blue: #455f79;
+  --c-strawberry: #963256;
+  --c-strawberry-dark: #642139;
+  --c-baby-pink: #e9adc2;
+  --c-baby-pink-dark: #e499b3;
+  --text-color-default: var(--c-slate-gray);
+  --text-color-on-high-contrast-default: var(--c-peach-light);
+  --headings-color-default: var(--c-steel-blue);
+  --link-color-default: var(--c-strawberry);
+  --link-color-hover: var(--c-strawberry-dark);
+  --link-color-on-high-contrast-default: var(--c-baby-pink);
+  --link-color-on-high-contrast-hover: var(--c-baby-pink-dark);
+  --bg-color-default: var(--c-peach);
+  --bg-color-high-contrast: var(--c-slate-gray);
+  --bg-color-high-contrast-hover: var(--c-slate-gray-dark);
+  padding: 2em 3em;
+  background-color: var(--bg-color-default);
+  color: var(--text-color-default);
 }
-.padded-section {
-  padding: 1em;
+h1 {
+  color: var(--headings-color-default);
+}
+a {
+  color: var(--link-color-default);
+}
+a:hover {
+  color: var(--link-color-hover);
+}
+.presentation-list {
+  --pl-text-color: var(--text-color-on-high-contrast-default);
+  --pl-heading-color: var(--link-color-on-high-contrast-default);
+  --pl-heading-color-hover: var(--link-color-on-high-contrast-hover);
+  --pl-bg: var(--bg-color-high-contrast);
+  --pl-bg-hover: var(--bg-color-high-contrast-hover);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 35em;
+}
+.presentation-list__link {
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: var(--pl-bg);
+  color: var(--pl-heading-color);
+  border-radius: 2px;
+}
+.presentation-list__link:hover {
+  background-color: var(--pl-bg-hover);
+  color: var(--pl-heading-color-hover);
+}
+.presentation-list__heading {
+  font-size: 1em;
+  text-decoration: underline;
+}
+.presentation-list__description {
+  text-decoration: none;
+  color: var(--pl-text-color);
 }
 /* -------------------------------------- */
 /* ==for the dirty code                   */
